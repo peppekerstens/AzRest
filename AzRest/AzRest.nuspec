@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>iAz</id>
+    <version>0.2.0</version>
+    <authors>Peppe Kerstens</authors>
+    <owners>Peppe Kerstens</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl></projectUrl>
+    <description></description>
+    <releaseNotes></releaseNotes>
+    <copyright></copyright>
+    <tags>PowerShell</tags>
+    <dependencies />
+  </metadata>
+</package>
