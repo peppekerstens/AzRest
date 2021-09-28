@@ -1,4 +1,4 @@
-function Invoke-AzRestRestMethod {
+function Invoke-AzRestMethod {
     [CmdletBinding(SupportsShouldProcess=$True)] #adds Confirm and WhatIf options as parameter options and so forth 
     param(
         [parameter(Mandatory=$true)]
