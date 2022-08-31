@@ -21,9 +21,18 @@ function Invoke-AzRestMethod {
         URI = $URI
     }
 
+
     If ($raw){
         Invoke-RestMethod @params -TimeoutSec 60 -Verbose:$false
-    }Else{
-        (Invoke-RestMethod @params -TimeoutSec 60 -Verbose:$false).Value 
+    }
+    Else{
+        # (Invoke-RestMethod @params -TimeoutSec 60 -Verbose:$false).Value 
+        [System.Collections.ArrayList]$List = @()
+        do {
+            $result = Invoke-RestMethod @params -TimeoutSec 60
+            $List.AddRange($result.value)
+            $Params.URI = $result.nextLink
+        } until ($Params.URI -eq $null)
+        return $list
     }
 }
